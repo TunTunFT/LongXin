@@ -1,0 +1,34 @@
+#include "login.h"
+#include "ui_login.h"
+#include <QPaintEvent>
+#include <QDebug>
+#include <QStyleOption>
+#include <QPainter>
+#include <QStyle>
+#include <QWidget>
+login::login(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::login)
+{
+    ui->setupUi(this);
+    //设置窗口无边框
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint);
+}
+
+login::~login()
+{
+    delete ui;
+}
+
+void login::paintEvent(QPaintEvent *event)
+{
+    QStyleOption opt;
+    opt.init(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
+void login::on_pushButton_back_clicked()
+{
+    emit this->login_success();
+}

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/register_zhuce.png</file>
+        <file>image/back.png</file>
+        <file>image/electric_quantity.png</file>
+        <file>image/wifi.png</file>
+        <file>image/widget.jpg</file>
+        <file>image/background.jpg</file>
+        <file>image/register.jpg</file>
+    </qresource>
+</RCC>
